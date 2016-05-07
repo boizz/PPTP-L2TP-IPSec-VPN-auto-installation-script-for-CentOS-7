@@ -387,7 +387,7 @@ net.ipv4.conf.default.accept_redirects = 0
 EOF
 
 #允许防火墙端口
-cat >/usr/lib/firewalld/services/pptpd.xml<<EOF
+cat >>/usr/lib/firewalld/services/pptpd.xml<<EOF
 <?xml version="1.0" encoding="utf-8"?>
 <service>
   <short>pptpd</short>
@@ -396,7 +396,7 @@ cat >/usr/lib/firewalld/services/pptpd.xml<<EOF
 </service>
 EOF
 
-cat >/usr/lib/firewalld/services/l2tpd.xml<<EOF
+cat >>/usr/lib/firewalld/services/l2tpd.xml<<EOF
 <?xml version="1.0" encoding="utf-8"?>
 <service>
   <short>l2tpd</short>
