@@ -138,11 +138,13 @@ char=$(get_char)
 clear
 mknod /dev/random c 1 9
 
-#安装yum源
-yum localinstall http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm -y
+#更新组件
+yum -y update
+
+#安装epel源
+yum install epel-release -y
 
 #安装依赖的组件
-yum -y update
 yum install -y openswan ppp pptpd xl2tpd wget
 
 rm -f /etc/ipsec.conf
