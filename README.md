@@ -4,16 +4,16 @@
 
 ### step 1
 
-put `vpn-script-for-centos7.sh` in your server
+put `vpn-script-for-centos7.sh` in your server.
 
 ### step 2
 
-Execute this script
+Execute this script.
 ```
 sh vpn-script-for-centos7.sh
 ```
 
 ### step 3
-Set up your configuration
+Set up your configuration.
 
 ###Completed!
