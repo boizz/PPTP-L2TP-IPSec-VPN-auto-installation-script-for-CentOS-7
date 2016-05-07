@@ -409,10 +409,12 @@ firewall-cmd --permanent --add-service=pptpd
 firewall-cmd --permanent --add-service=l2tpd
 firewall-cmd --permanent --add-service=ipsec
 firewall-cmd --permanent --add-masquerade
+firewall-cmd --permanent --direct --add-rule ipv4 filter FORWARD 0 -p tcp -i ppp+ -j TCPMSS --syn --set-mss 1356
 firewall-cmd --reload
 #iptables --table nat --append POSTROUTING --jump MASQUERADE
 #iptables -t nat -A POSTROUTING -s $iprange.0/24 -o $eth -j MASQUERADE
 #iptables -t nat -A POSTROUTING -s $iprange.0/24 -j SNAT --to-source $serverip
+#iptables -I FORWARD -p tcp –syn -i ppp+ -j TCPMSS –set-mss 1356
 #service iptables save
 
 #允许开机启动
