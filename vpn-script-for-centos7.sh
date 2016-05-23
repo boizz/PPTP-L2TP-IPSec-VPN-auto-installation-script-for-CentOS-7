@@ -139,7 +139,7 @@ clear
 mknod /dev/random c 1 9
 
 #更新组件
-yum -y update
+yum update -y
 
 #安装epel源
 yum install epel-release -y
@@ -147,8 +147,8 @@ yum install epel-release -y
 #安装依赖的组件
 yum install -y openswan ppp pptpd xl2tpd wget
 
-rm -f /etc/ipsec.conf
 #创建ipsec.conf配置文件
+rm -f /etc/ipsec.conf
 cat >>/etc/ipsec.conf<<EOF
 # /etc/ipsec.conf - Libreswan IPsec configuration file
 
