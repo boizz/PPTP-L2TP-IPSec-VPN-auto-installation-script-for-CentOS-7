@@ -407,6 +407,7 @@ cat >>/usr/lib/firewalld/services/l2tpd.xml<<EOF
 </service>
 EOF
 
+firewall-cmd --reload
 firewall-cmd --permanent --add-service=pptpd
 firewall-cmd --permanent --add-service=l2tpd
 firewall-cmd --permanent --add-service=ipsec
