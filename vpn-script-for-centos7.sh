@@ -193,6 +193,9 @@ conn L2TP-PSK-noNAT
     dpddelay=40
     dpdtimeout=130
     dpdaction=clear
+    ike=3des-sha1,aes-sha1,aes256-sha1,aes256-sha2_256 
+    phase2alg=3des-sha1,aes-sha1,aes256-sha1,aes256-sha2_256
+    sha2-truncbug=yes
 # For example connections, see your distribution's documentation directory,
 # or the documentation which could be located at
 #  /usr/share/docs/libreswan-3.*/ or look at https://www.libreswan.org/
