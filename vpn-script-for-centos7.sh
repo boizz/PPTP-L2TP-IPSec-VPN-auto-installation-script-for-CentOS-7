@@ -193,6 +193,8 @@ conn L2TP-PSK-noNAT
     dpddelay=40
     dpdtimeout=130
     dpdaction=clear
+    leftnexthop=%defaultroute
+    rightnexthop=%defaultroute
     ike=3des-sha1,aes-sha1,aes256-sha1,aes256-sha2_256 
     phase2alg=3des-sha1,aes-sha1,aes256-sha1,aes256-sha2_256
     sha2-truncbug=yes
